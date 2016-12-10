@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luhn-check-elm.git"
+    "url": "git+https://github.com/fernandocortez/luhn-check-elm.git"
   },
   "scripts": {
     "rimraf": "rimraf",
