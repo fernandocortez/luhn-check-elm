@@ -1,0 +1,30 @@
+{
+  "name": "luhn-check-elm",
+  "version": "1.0.0",
+  "description": "Luhn check app written in Elm",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luhn-check-elm.git"
+  },
+  "scripts": {
+    "rimraf": "rimraf",
+    "elm:install": "npm run rimraf -- elm-stuff && elm package install -y",
+    "prebuild": "npm run clean",
+    "build": "elm-make src/Main.elm --output elm.js",
+    "postbuild": "uglifyjs -o elm.js --compress --mangle -- elm.js",
+    "clean": "npm run rimraf -- elm.js",
+    "predev": "npm run clean",
+    "dev": "elm-live src/Main.elm --output=elm.js",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "elm": "~0.18.0",
+    "elm-live": "~2.6.0",
+    "rimraf": "~2.5.0",
+    "uglify-js": "~2.7.0"
+  }
+}
